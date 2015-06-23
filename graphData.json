@@ -1,0 +1,17 @@
+{
+  "series": [
+    "Sales",
+    "Income",
+    "Expense"
+  ],
+  "data": [
+    {
+      "x": "Computers",
+      "y": [
+        54,
+        0,
+        879
+      ]
+    }
+  ]
+}

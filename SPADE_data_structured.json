@@ -1,0 +1,398 @@
+{
+    "elements": [
+        {
+            "legend": null,
+            "fields": [
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.ITEM_NUMBER",
+                    "label": "IMPORT_ITEMS.ITEM_NUMBER",
+                    "required": true,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 8,
+                    "key": "root-itemNumber",
+                    "default": "123451"
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.REVISION",
+                    "label": "IMPORT_ITEMS.REVISION",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 6,
+                    "key": "root-revision",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.DESCRIPTION_ENGLISH",
+                    "label": "IMPORT_ITEMS.DESCRIPTION_ENGLISH",
+                    "required": true,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 45,
+                    "key": "root-descriptionEnglish",
+                    "default": "ImportedItem1"
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.DESCRIPTION_LOCAL",
+                    "label": "IMPORT_ITEMS.DESCRIPTION_LOCAL",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 45,
+                    "key": "root-descriptionLocal",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.DESCRIPTION_1_GERMAN",
+                    "label": "IMPORT_ITEMS.DESCRIPTION_1_GERMAN",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 45,
+                    "key": "root-description1German",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.DESCRIPTION_2_FRENCH",
+                    "label": "IMPORT_ITEMS.DESCRIPTION_2_FRENCH",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 45,
+                    "key": "root-description2French",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.DESCRIPTION_ERP",
+                    "label": "IMPORT_ITEMS.DESCRIPTION_ERP",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 30,
+                    "key": "root-descriptionErp",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.SIZE",
+                    "label": "IMPORT_ITEMS.SIZE",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 30,
+                    "key": "root-size",
+                    "default": "333"
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.REMARK",
+                    "label": "IMPORT_ITEMS.REMARK",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 30,
+                    "key": "root-remark",
+                    "default": "Remark"
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.MATERIAL",
+                    "label": "IMPORT_ITEMS.MATERIAL",
+                    "required": true,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 30,
+                    "key": "root-material",
+                    "default": "Wood"
+                },
+                {
+                    "type": "decimal",
+                    "placeholder": "IMPORT_ITEMS.WEIGHT",
+                    "label": "IMPORT_ITEMS.WEIGHT",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 11,
+                    "scale": 6,
+                    "key": "root-weight",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.MANUFACTURER_LONG",
+                    "label": "IMPORT_ITEMS.MANUFACTURER_LONG",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 50,
+                    "key": "root-manufacturerLong",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.MANUFACTURER_SHORT",
+                    "label": "IMPORT_ITEMS.MANUFACTURER_SHORT",
+                    "required": true,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 4,
+                    "key": "root-manufacturerShort",
+                    "default": "SNY"
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.MANUFACTURER_ITEM_CODE",
+                    "label": "IMPORT_ITEMS.MANUFACTURER_ITEM_CODE",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 50,
+                    "key": "root-manufacturerItemCode",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.MANUFACTURER_FAMILY_NAME",
+                    "label": "IMPORT_ITEMS.MANUFACTURER_FAMILY_NAME",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 50,
+                    "key": "root-manufacturerFamilyName",
+                    "default": ""
+                },
+                {
+                    "type": "select",
+                    "placeholder": "IMPORT_ITEMS.TYPE",
+                    "label": "IMPORT_ITEMS.TYPE",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "options": [
+                        {
+                            "value": "buy",
+                            "name": null
+                        },
+                        {
+                            "value": "make",
+                            "name": null
+                        },
+                        {
+                            "value": "standard",
+                            "name": null
+                        }
+                    ],
+                    "key": "root-type",
+                    "default": "buy"
+                },
+                {
+                    "type": "radio",
+                    "placeholder": "IMPORT_ITEMS.PREFERRED",
+                    "label": "IMPORT_ITEMS.PREFERRED",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "options": [
+                        {
+                            "value": "true",
+                            "name": "PA_SYS_OPERATION.YES"
+                        },
+                        {
+                            "value": "false",
+                            "name": "PA_SYS_OPERATION.NO"
+                        }
+                    ],
+                    "key": "root-preferred",
+                    "default": "true"
+                },
+                {
+                    "type": "select",
+                    "placeholder": "IMPORT_ITEMS.UNIT",
+                    "label": "IMPORT_ITEMS.UNIT",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "options": [
+                        {
+                            "value": "m",
+                            "name": null
+                        },
+                        {
+                            "value": "m2",
+                            "name": null
+                        },
+                        {
+                            "value": "piece",
+                            "name": null
+                        }
+                    ],
+                    "key": "root-unit",
+                    "default": "m"
+                },
+                {
+                    "type": "select",
+                    "placeholder": "IMPORT_ITEMS.STATE",
+                    "label": "IMPORT_ITEMS.STATE",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "options": [
+                        {
+                            "value": "new",
+                            "name": null
+                        },
+                        {
+                            "value": "released",
+                            "name": null
+                        },
+                        {
+                            "value": "obsolete",
+                            "name": null
+                        }
+                    ],
+                    "key": "root-state",
+                    "default": "new"
+                },
+                {
+                    "type": "textarea",
+                    "placeholder": "IMPORT_ITEMS.COMMENT",
+                    "label": "IMPORT_ITEMS.COMMENT",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 500000,
+                    "rows": 5,
+                    "key": "root-comment",
+                    "default": "asdf",
+                    "cols": 80
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.TAG",
+                    "label": "IMPORT_ITEMS.TAG",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 30,
+                    "key": "root-tag",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.CLASSIFICATION_1",
+                    "label": "IMPORT_ITEMS.CLASSIFICATION_1",
+                    "required": true,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 40,
+                    "key": "root-classification1",
+                    "default": "class1"
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.CLASSIFICATION_2",
+                    "label": "IMPORT_ITEMS.CLASSIFICATION_2",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 40,
+                    "key": "root-classification2",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.CLASSIFICATION_3",
+                    "label": "IMPORT_ITEMS.CLASSIFICATION_3",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 40,
+                    "key": "root-classification3",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.CLASSIFICATION_4",
+                    "label": "IMPORT_ITEMS.CLASSIFICATION_4",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 40,
+                    "key": "root-classification4",
+                    "default": ""
+                },
+                {
+                    "type": "text",
+                    "placeholder": "IMPORT_ITEMS.CLASSIFICATION_5",
+                    "label": "IMPORT_ITEMS.CLASSIFICATION_5",
+                    "required": false,
+                    "readonly": false,
+                    "disabled": false,
+                    "hidden": false,
+                    "mandatory": false,
+                    "maxlength": 40,
+                    "key": "root-classification5",
+                    "default": ""
+                }
+            ]
+        }
+    ]
+}
