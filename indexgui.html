@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en-us" ng-app="intelliGui">
     <head>
-        <title>intelliGUI Version 1.3(Drag and drop)</title>
+        <title>intelliGUI Ribbon Interface</title>
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta charset="UTF-8">
 
-        <!-- load bootstrap and fontawesome -->
+        <!-- load bootstrap via CDN -->
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="style.css">
         
-        <!-- load angular via CDN -->
-        <script src="http://code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>
-  
-        <!-- load jQuery and jQueryUI -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+        
+        <!-- load angular/ jQuery / jQueryUI / ng-map / googlemap API  via CDN -->
+        <script src="http://code.angularjs.org/1.3.0-rc.1/angular.min.js"></script>      
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>  
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="https://maps.google.com/maps/api/js"></script>
+        <script src="https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
         
-        <!-- load d3(graph) -->
-        <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
-        <script type="text/javascript" src="libraries/angular-charts.min.js"></script>
+        <!-- load d3 via CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
         
-        <!-- ngmap scripts -->
-        <script src="//maps.google.com/maps/api/js"></script>
-        <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
-
+        <!-- load n3 graph -->
+        <script type="text/javascript" src="libraries/line-chart.min.js"></script>
+        
+        <!-- load gridster.js (local)-->
+        <script type="text/javascript" src="libraries/gridster.js"></script>
+        <link rel="stylesheet" type="text/css" href="libraries/gridster.css">
+        
+        <!-- load angular charts (local)-->
+        <script src="libraries/angular-charts.min.js" type='text/javascript'></script>
+        
+        <!-- load objectTable (local)  -->
+        <script type="text/javascript" src="libraries/object-table.js"></script>
+        <link rel="stylesheet" type="text/css" href="libraries/object-table-style.css">
        
         <!-- load scripts -->
         <script src="appgui.js"></script>
-        <script src="dragdrop.js"></script>
-        <link rel="stylesheet" type="text/css" href="/libraries/object-table-style.css">
-        <script type="text/javascript" src="libraries/object-table.js"></script>
         
+        <!-- load wijiRibbon scripts -->
+        <link href="http://cdn.wijmo.com/themes/aristo/jquery-wijmo.css" rel="stylesheet" type="text/css" />
+        <link href="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20151.69.min.css" rel="stylesheet" type="text/css" />s
+        <script src="http://cdn.wijmo.com/jquery.wijmo-open.all.3.20151.69.min.js" type="text/javascript"></script>
+        <script src="http://cdn.wijmo.com/jquery.wijmo-pro.all.3.20151.69.min.js" type="text/javascript"></script>
+        <script src="http://cdn.wijmo.com/interop/angular.wijmo.3.20151.69.min.js"></script>
         
 
     </head>
@@ -41,7 +53,7 @@
 			<nav class="navbar navbar-default">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">IntelliGUI Version 1.3(DandD, GoogleMaps)</a>
+					<a class="navbar-brand" href="/">IntelliGUI Ribbon</a>
 				</div>
 
 				<ul class="nav navbar-nav navbar-right">
@@ -51,60 +63,151 @@
 			</nav>
 		</header>
 
+            
         <!-- angularJS screen component -->
         <div class="container" ng-controller="mainController" >
             
-            <div class="column">    
-                <div class="portlet panel panel-default">
-                    <div class="panel-heading portlet-header">Radio button list</div>
-                     <div class="radiolist1" ng-repeat="row in numberData" >
-                        <label><input type="radio" name="optradio">{{row}}</label>
+            
+            <hr>
+            
+            <!-- Drag and drop grid -->
+            <div class="gridster container-fluid">
+                
+            <!-- Ribbon -->
+            <wij-ribbon id="ribbon" style="width: 1200px;">
+                <!-- Tabs -->
+                <ul>
+                    <li><a href="#PrimaryTab">Primary Tab</a></li>
+                    <li><a href="#SecondaryTab">Secondary Tab</a></li>
+                </ul>
+                <!-- Tab groups (Primary and Secondary Tab) -->
+                <div id="PrimaryTab">
+                    <ul>
+                        <li id="actiongroup">
+                            <button title="Save" class="wijmo-wijribbon-bigbutton" name="save" ng-click="saveButton()">
+                                <div class="wijmo-wijribbon-save"></div>
+                                <span>Save</span>
+                            </button>
+                            <span class="wijmo-wijribbon-list">
+                                <button title="Undo" class="wijmo-wijribbon-undo" name="undo">
+                                <span>Undo</span>
+                                </button>
+                                
+                                <button title="Redo" class="wijmo-wijribbon-redo" name="redo">
+                                <span>Redo</span>
+                                </button>
+                                
+                                
+                            </span>
+                            <div>Actions</div>
+                        </li>
+                        <li id="secondgroup">
+                            <span class="wijmo-wijribbon-list">
+                                    <input type="checkbox" id="checkbox"></input><span>D and D</span>
+                                    <label for="checkbox" id="checkbox" title="Drag and Drop" class="wijmo-wijribbon-copy"></label>
+                            </span>
+                            
+                            <button title="Map" class="wijmo-wijribbon-redo" name="map" ng-click="addMap()">
+                            <span>Add Google Map</span>
+                            </button>
+                            
+                            <button title="MapRemove" class="wijmo-wijribbon-undo" name="mapr" ng-click="removeMap()">
+                            <span>Remove Google Map</span>
+                            </button>
+                    
+                            <div>Dynamic Actions</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="SecondaryTab">
+                    
+                    <ul>
+                        <li>
+                            <div title="Table" class="wijmo-wijribbon-splitbutton">
+                                <button title="customize button" name="customcommand">Click Me</button>
+                            </div>
+                            <div>Customize</div>
+                        </li>
+                    </ul>
+                </div>
+            </wij-ribbon>
+                
+            <!-- Toggle on/off -->    
+            <input type="checkbox" id="checkbox" /><span>DnD</span>
+                
+               
+            <br>
+            <br>
+            
+            <ul>
+            
+                <!-- Radio button list -->
+                <li data-row="1" data-col="1" data-sizex="2" data-sizey="2">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Radio button list</div>
+                         <div class="radiolist1" ng-repeat="row in numberData" >
+                            <label><input type="radio" name="optradio">{{row}}</label>
+                         </div>
+                    </div>
+                </li>
+                
+                <!-- Dropdown list -->                
+                <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Dropdown list</div>
+                        <select convert-to-number class="form-control">
+                        <option ng-repeat="listitem in numberData">{{listitem}}</option>
+                        </select>
+                    </div>
+                </li>
+                
+                <!-- Sorting table  -->
+                <li data-row="1" data-col="2" data-sizex="3" data-sizey="2">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Table</div>
+                            <table object-table
+                                   display="6"
+                                   data="nameTable"
+                                   headers="Product, Price, Type, Lat, Lon" 
+                                   fields="product, price, type, lat, lon"
+                                   sorting="compound"
+                                   editable="false"
+                                   drag-columns="true"
+                                   select="multiply"
+                                   selected-model="selectedValues">
+                            </table>
+                    </div>    
+                </li>
+             
+
+                <!-- Google Map -->
+                <li data-row="2" data-col="2" data-sizex="2" data-sizey="3">
+                    <div id="map_component" class="panel panel-primary hide">
+                        <div class="panel-heading">Map</div>
+                            <map zoom="15" id="map_canvas">    
+                                <info-window visible="true" >
+                                    <marker
+                                        visible="true"
+                                    </marker>
+                                </info-window>
+                            </map>
+                    </div>
+                </li>
+                
+                <!-- Bar Graph -->
+                <li data-row="4" data-col="4" data-sizex="4" data-sizey="3">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">Bar Graph</div>
+                        <linechart data="graphData" options="options" mode="" width="550" height="300"></linechart>
                      </div>
-                </div>
-            
+                </li>
 
-                <div class="portlet panel panel-default">
-                    <div class="panel-heading portlet-header">Dropdown list</div>
-                    <select convert-to-number class="form-control">
-                    <option ng-repeat="listitem in numberData">{{listitem}}</option>
-                    </select>
-                </div>
-            </div>    
-
-            
-            <div class="column">
-                <div class="portlet panel panel-primary">
-                    <div class="panel-heading portlet-header">Table</div>
-                        <table object-table
-                               display="5"
-                               data="nameTable"
-                               headers="Id, Name, Surname" 
-                               fields="num, name, surname"
-                               sorting="compound"
-                               editable="false" >
-                        </table>
-                </div>
+            </ul>
+                            
             </div>
             
-            <div class="column">
-                <div class="panel panel-primary">
-                    <div class="panel-heading portlet-header">Map</div>
-                        <map center="current-location" zoom="15">    
-                            <info-window position="current-location" visible="true">
-                                <marker
-                                  position="current-position"
-                                  visible="true">
-                                </marker>
-                            </info-window>
-                        </map>
-                </div>
-            </div>
             
-
-            
-          <!--  <p>{{spadeData.elements[0].fields[0].placeholder}}</p>    This fetches data from the SPADE side--> 
-                      
-		</div>
+        </div>
 
 
     

@@ -1,0 +1,12 @@
+[
+    {
+        "x": "Warehouse",
+        "y": 54,
+        "tooltip": "This is a tooltip"
+    },
+    {
+        "x": "Available",
+        "y": 879,
+        "tooltip": "This is a tooltip"
+    }
+]

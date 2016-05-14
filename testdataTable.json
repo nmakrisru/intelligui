@@ -1,25 +1,34 @@
 [
     {
-        "num":"100",
-        "name":"John",
-        "surname":"Doe"
+        "product":"Apple iPhone 6(32GB)",
+        "type":"Smartphone",
+        "price":"730",
+        "lat":"65.54898",
+        "lon":"8.51984"
     },
     
     {
-        "num":"200",
-        "name":"Jane",
-        "surname":"Doe"
+        "product":"LG Nexus 5(16GB)",
+        "type":"Smartphone",
+        "price":"310",
+        "lat":"11.2568435",
+        "lon":"1.2548952"       
     },
     
     {
-        "num":"300",
-        "name":"James",
-        "surname":"Foo"
+        "product":"Apple iPad(16GB)",
+        "type":"Tablet",
+        "price":"580",
+        "lat":"-66.3956843",
+        "lon":"0.9548952"
     },
     
     {
-        "num":"400",
-        "name":"Johan",
-        "surname":"Foo"
+        "product":"HTC One(32GB)",
+        "type":"Smartphone",
+        "price":"550",
+        "lat":"25.0568435",
+        "lon":"17.0548952"
     }
+    
 ]
