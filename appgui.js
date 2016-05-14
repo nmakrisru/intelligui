@@ -49,8 +49,10 @@ intelliGui.controller('mainController', ['$scope', '$log', '$http', '$window', f
 //*Gridster (Drag and Drop)*//
     
     var gridster = $(".gridster > ul").gridster({  /* Drag & drop Grid creation and initializations */
-        widget_margins: [5,18],
-        widget_base_dimensions: [130,108],
+        widget_margins: [10,15],
+        widget_base_dimensions: [140,140],
+        min_cols: 4,
+        min_rows: 7,
         serialize_params: function($w, wgd)
         {
            return {
